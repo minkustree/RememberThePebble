@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/0.87283976/PATH/delimiter=;
+environment/project/0.87283976/PATH/operation=replace
+environment/project/0.87283976/PATH/value=C\:\\Development\\cygwin\\home\\Andy\\PebbleSDK-2.1.1\\bin;C\:\\Development\\cygwin\\bin\\;C\:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C\:\\windows\\system32;C\:\\windows;C\:\\windows\\System32\\Wbem;C\:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C\:\\Program Files (x86)\\Windows Live\\Shared;C\:\\Program Files\\Apache\\apache-ant-1.8.4\\bin;C\:\\Development\\Python27;C\:\\Development\\Python27\\Scripts;C\:\\Development\\apache-maven-3.1.0\\bin;C\:\\Program Files (x86)\\Git\\cmd;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C\:\\Program Files\\SlikSvn\\bin;C\:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C\:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C\:\\Program Files (x86)\\CMake 2.8\\bin;
+environment/project/0.87283976/append=true
+environment/project/0.87283976/appendContributed=true
