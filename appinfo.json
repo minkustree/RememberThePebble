@@ -1,0 +1,17 @@
+{
+  "uuid": "4f7803a3-2507-481d-aca0-a3e122e4af42",
+  "shortName": "RememberThePebble",
+  "longName": "RememberThePebble",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
