@@ -230,3 +230,8 @@ Pebble.addEventListener("showConfiguration", function() {
 		Pebble.openURL(authUrl);
 	}
 );
+
+Pebble.addEventListener("webviewclosed", function(e) {
+	console.log("configuration window returned: " + e.response);
+});
+
