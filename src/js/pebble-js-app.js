@@ -1,3 +1,5 @@
+var secret = 'Insert APP Secret Here';
+
 // MD5 implementation from http://www.myersdaily.org/joseph/javascript/md5-text.html
 function md5cycle(x, k) {
 	var a = x[0], b = x[1], c = x[2], d = x[3];
@@ -184,13 +186,47 @@ function md5cycle(x, k) {
 	}
 	}
 
+function dictToParam(obj) {
+	  var str = [];
+	  for(var p in obj)
+	     str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+	  return str.join("&");
+};
+
+function sign(params) {
+	var s = '';
+	var apiSig = '';
+	
+	keys = Object.keys(params);
+	keys.sort();
+	
+	for (i = 0; i < keys.length; i++) {
+		s += keys[i] + params[keys[i]];
+	}
+	apiSig = md5(secret + s);
+	return apiSig;
+};
+
+function getAuthUrl() {
+	params = {'api_key' : '0004c0cfe47c4723e985045df79892c9',
+  		  'perms'   : 'delete' };
+	var url = 'http://www.rememberthemilk.com/services/auth/?';
+	url += dictToParam(params);
+	url += '&api_sig=' + sign(params)
+	console.log(url);
+	return url;
+}
+
 Pebble.addEventListener("ready",
     function(e) {
         console.log("Hello world! - Sent from your javascript application.");
     }
 );
+
 Pebble.addEventListener("showConfiguration", function() {
-		console.log("showConfiguration event");
-		Pebble.openURL("http://www.realvnc.com");
+		console.log("showConfiguration: Getting auth URL");
+		var authUrl = getAuthUrl();
+		console.log("showConfiguration: Opening auth URL: " + authUrl);
+		Pebble.openURL(authUrl);
 	}
 );
