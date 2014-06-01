@@ -1,0 +1,10 @@
+// Put your Remember The Milk API key and secret here.
+//
+// https://www.rememberthemilk.com/services/api/keys.rtm
+//
+// This file is combined with pebble-js-app.js.in at build time
+// to produce the final pebble-js-app.js file
+
+var API_KEY = 'Your RTM API Key';
+var APP_SECRET = 'Your RTM API Secret';
+ 

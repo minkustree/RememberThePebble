@@ -20,5 +20,6 @@ def build(ctx):
     ctx.pbl_program(source=ctx.path.ant_glob('src/**/*.c'),
                     target='pebble-app.elf')
 
+    ctx(rule='cat ${SRC} > ${TGT}', source='src/js/config.js.in src/js/pebble-js-app.js.in', target='src/js/pebble-js-app.js')
     ctx.pbl_bundle(elf='pebble-app.elf',
-                   js=ctx.path.ant_glob('src/js/**/*.js'))
+                   js=ctx.bldnode.ant_glob('src/js/**/*.js'))
